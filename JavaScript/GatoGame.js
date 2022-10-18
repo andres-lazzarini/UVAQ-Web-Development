@@ -18,6 +18,7 @@ window.addEventListener('load', function () {
         document.querySelector(".start-content").style.setProperty("opacity", "0");
         setTimeout(() => {
             document.querySelector(".start-content").style.setProperty("display", "none");
+            document.querySelector(".game-container").style.display = "block";
             document.querySelector(".game-content").style.display = "flex";
             document.querySelector(".game-content").style.opacity = "1";
         }, 500);
@@ -81,8 +82,8 @@ function addCrossCircle() {
         cells[cellnum - 1] = "o";
         flag = true;
 
-        document.querySelector(":root").style.setProperty("--winlinecolor", "lime");
-        document.querySelector(":root").style.setProperty("--blurwinline", "lime");
+        document.querySelector(":root").style.setProperty("--winlinecolor", "cyan");
+        document.querySelector(":root").style.setProperty("--blurwinline", "cyan");
         document.querySelector(":root").style.setProperty("--hovcolor", "#00ffff");
         document.querySelector(".namep2 span").style.fontSize = "0";
         document.querySelector(".namep1 span").style.fontSize = "38px";
