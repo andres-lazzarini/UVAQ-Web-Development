@@ -10,7 +10,7 @@ var namep2;
 var moves = 0;
 
 window.addEventListener('load', function () {
-    audiocanca.play();
+    // audiocanca.play();
 
     const startbtn = document.querySelector(".start-btn");
 
@@ -61,8 +61,9 @@ function addCrossCircle() {
         cells[cellnum - 1] = "x";
         flag = false;
 
-        document.querySelector(":root").style.setProperty("--winlinecolor", "lightcoral");
-        document.querySelector(":root").style.setProperty("--hovcolor", "orange");
+        document.querySelector(":root").style.setProperty("--winlinecolor", "orange");
+        document.querySelector(":root").style.setProperty("--blurwinline", "orange");
+        document.querySelector(":root").style.setProperty("--hovcolor", "#E4DCCF");
         document.querySelector(".namep1 span").style.fontSize = "0";
         document.querySelector(".namep2 span").style.fontSize = "38px";
         setTimeout(() => {
@@ -80,8 +81,9 @@ function addCrossCircle() {
         cells[cellnum - 1] = "o";
         flag = true;
 
-        document.querySelector(":root").style.setProperty("--winlinecolor", "darkseagreen");
-        document.querySelector(":root").style.setProperty("--hovcolor", "cyan");
+        document.querySelector(":root").style.setProperty("--winlinecolor", "lime");
+        document.querySelector(":root").style.setProperty("--blurwinline", "lime");
+        document.querySelector(":root").style.setProperty("--hovcolor", "#00ffff");
         document.querySelector(".namep2 span").style.fontSize = "0";
         document.querySelector(".namep1 span").style.fontSize = "38px";
         setTimeout(() => {
