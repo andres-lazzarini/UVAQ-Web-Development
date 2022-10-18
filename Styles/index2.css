@@ -1,0 +1,35 @@
+* {
+    font-size: 24px;
+    font-family: 'roboto', sans-serif;
+}
+
+#titulo {
+    color: red;
+}
+
+p.text {
+    color: slateblue;
+}
+
+p.especial {
+    color: mediumseagreen;
+}
+
+div p {
+    color: aquamarine;
+}
+
+div h2, div h3 {
+    color: brown;
+}
+
+.color {
+    color: #aaee0e;
+    border: 2px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+}

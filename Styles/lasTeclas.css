@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.square {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #00ff87;
+    background: greenyellow;
+    box-shadow: 0px 0px 15px 1px #00abffad;
+    transition: ease 0.25s;
+}

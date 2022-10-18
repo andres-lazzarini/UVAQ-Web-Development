@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Zee';
+    src: url(../Fonts/Noordwijk_aan_Zee_DEMO.ttf);
+}
+
+@font-face {
+    font-family: 'Catalish';
+    src: url(../Fonts/Catalish\ Huntera.ttf);
+}
+
+@font-face {
+    font-family: 'Gta';
+    src: url(../Fonts/pricedown\ bl.otf);
+}
+
+.text {
+    color: tomato;
+    /* text-align: end; */
+    display: block;
+    /* direction: ltr; */
+    /* text-decoration: line-through; */
+    text-transform: uppercase;
+    font-family: 'Gta';
+    font-size: 50px;
+}
+
+/* .text-align-rigth {
+    text-align: right;
+} */
+
+.p-text {
+    text-indent: 50px;
+    text-align-last: center;
+    vertical-align: middle;
+    display: table-cell;
+    text-decoration: underline;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    word-spacing: 5px;
+}
+
+.lista {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+}
+
+.lista li {
+    /* width: 200px; */
+}

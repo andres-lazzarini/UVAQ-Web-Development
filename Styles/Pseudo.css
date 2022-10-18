@@ -1,0 +1,63 @@
+div > span {
+    color: red;
+    font-size: 28px;
+}
+
+div > span:hover {
+    color: blue;
+}
+
+/* div:hover > span {
+    color: green;
+} */
+
+/* div:hover:not(.testing) > span {
+    color: green;
+} */
+
+div:focus > span, div:active > span{
+    color: aqua;
+}
+
+a:visited {
+    color: yellow;
+}
+
+/* div a:first-child {
+    color: purple !important;
+} */
+
+div a:last-child {
+    color: purple !important;
+}
+
+div::before {
+    content: "";
+}
+
+div::after {
+    content: "";
+}
+
+.xxx{
+    background-image: url("https://www.dondevive.org/wp-content/uploads/2017/07/donde-vive-jaguarundi.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.xxx::after {
+    content: "I LOVE YOU MESSI";
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.475);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 500px;
+    vertical-align: center;
+}

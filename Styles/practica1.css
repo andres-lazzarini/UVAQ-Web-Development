@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'poppins';
+    src: url(../Fonts/Poppins-SemiBold.ttf);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'poppins';
+    color: white;
+}
+
+.bg {
+    background-image: linear-gradient(65deg, #272936 45%, rgba(92, 92, 92, 0.563)), url("../Images/181208b5-df8c-4aa8-a930-4074d068d798.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.nav {
+    margin: 0;
+    list-style: none;
+    color: #545B68;
+    display: flex; 
+    padding: 30px;
+    align-items: center;
+}
+
+.nav li {
+    margin-left: 125px;
+    cursor: pointer;
+}
+
+.nav .circle {
+    height: 30px;
+    width: 30px;
+    background-color: #208EE5;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 0;
+}
+
+.nav .apptitle {
+    color: white;
+    line-height: 30px;
+    margin-left: 15px;
+}
+
+.nav .apptitle span{
+    color: #208EE5;
+}
+
+.form {
+    padding-left: 60px;
+}
+
+.form h4{
+    color: #878C9C;
+    margin: 85px 0 10px;
+    text-transform: uppercase;
+}
+
+.form h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.form h1 span {
+    color: #208EE5;
+}
+
+.form p {
+    color: #878C9C;
+    font-size: 14px;
+    margin: 15px 0 45px;
+}
+
+.form a{
+    text-decoration: none;
+}
+
+.form a:link, a:visited{
+    color: #208EE5;
+}
+
+.form a:active{
+    color: #165b90;
+}
+
+.form a:hover{
+    color: #30a5ff;
+}
+
+.form .fields {
+    max-width: 450px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form .fields input {
+    border-radius: 15px;
+    height: 20px;
+    background-color: #313645;
+    border: none;
+    font-family: 'poppins';
+    color: white;
+}
+
+.form .fields input:focus {
+    outline: #208EE5;
+    border: 1px solid #208EE5;
+    background-color: #3B3E48;
+    box-shadow: #208EE5 0px 0px 5px;
+}
+
+.form .fields #name, #lastname {
+    width: 155px;
+    padding: 25px 25px 10px;
+}
+
+.form .fields #lastname {
+    margin-left: 15px;
+}
+
+.form .fields #email, #password {
+    width: 390px;
+    padding: 25px 25px 10px;
+}
+
+.btns {
+    list-style: none;
+    padding: 0;
+    margin: 45px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.btns button {
+    font-family: 'poppins';
+    background: #515966;
+    border: none;
+    color: white;
+    width: 210px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btns .btn-blue{
+    background: #208EE5;
+}
+
+.txtfields {
+    position: relative;
+}
+
+.txtfields span{
+    color: red;
+    font-size: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+}
+
+.txtfields label {
+    font-size: 10px;
+    position: absolute;
+    top: 8px;
+    left: 25px;
+    width: 100%;
+    height: 100%;
+    color: #656c7e;
+}
+
+.txtfields .lbllast {
+    font-size: 10px;
+    position: absolute;
+    top: 8px;
+    left: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.form .fields input:focus + label{
+    color: #208EE5;
+}
+
+.txtfields img {
+    position: absolute;
+    top: 18px;
+    left: 170px;
+    width: 18px;
+    height: 18px;
+}
+
+.txtfields .imglast {
+    position: absolute;
+    top: 18px;
+    left: 185px;
+    width: 18px;
+    height: 18px;
+}
+
+.txtfields .lastimgs {
+    position: absolute;
+    top: 18px;
+    left: 405px;
+    width: 18px;
+    height: 18px;
+}
+
+#passeye {
+    cursor: pointer;
+}

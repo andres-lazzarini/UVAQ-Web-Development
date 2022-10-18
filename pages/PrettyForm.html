@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="forms">
+    <meta name="description" content="This is a form">
+    <title>Pretty Form</title>
+
+</head>
+<body style="font-family: system-ui; 
+            background-image: url('https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/01/11/15471867627494.gif');
+            background-repeat: repeat-x;
+            background-size: 100% auto;
+            position: fixed;
+            top:0;
+            z-index: 1;
+            width:100%;
+            height:100%;
+            margin: 0;">
+
+    <div style="width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #000000aa, #505050d0 650px);
+    "></div>
+
+    <form action="" method="post" autocomplete="off">
+        <table style="position: fixed; top: 0; background-color: #fff; border-radius: 20px; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; margin: 40px 215px;">
+            <tr>
+                <td colspan="3" style="text-align: center; padding: 25px 30px; font-size: 25px;">
+                    <b>Italian Mafia Registration Info</b>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 15px 45px;">
+                    <!-- FIRST NAME -->
+                    <Label for="firstnameId">First Name</Label>
+                    <br>
+                    <input type="text" name="FirstName" id="firstnameId" 
+                    style="border: none;
+                    border-bottom: 2px solid;
+                    border-image-slice: 1;
+                    border-image-source: linear-gradient(to left, #a2a2a2, #000000);
+                    width: 270px;">
+                </td>
+                <td style="padding: 15px 45px;">
+                    <!-- RADIO -->
+                    <label for="">Genre</label>
+                    <br>
+                    <input type="radio" name="Genre" id="maleId" value="Male">
+                    <label for="maleId">Male</label>
+                    <input type="radio" name="Genre" id="femaleId" value="Female">
+                    <label for="femaleId">Female</label>
+                </td>
+                <td rowspan="2" style="padding: 15px 45px;">
+                    <!-- TEXT AREA -->
+                    <label for="aboutId">Tell us About Yourself</label>
+                    <br>
+                    <textarea name="About" id="aboutId" cols="32" rows="6"
+                    style="border: none;
+                    border-top: 2px solid;
+                    border-bottom: 2px solid;
+                    border-image-slice: 1;
+                    border-image-source: linear-gradient(to left, #a2a2a2, #000000);"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 15px 45px;">
+                    <!-- LAST NAME -->
+                    <Label for="lastnameId">Last Name</Label>
+                    <br>
+                    <input type="text" name="LastName" id="lastnameId"
+                    style="border: none;
+                    border-bottom: 2px solid;
+                    border-image-slice: 1;
+                    border-image-source: linear-gradient(to left, #a2a2a2, #000000);
+                    width: 270px;">
+                </td>
+                <td style="padding: 15px 45px;">
+                    <!-- ADDRESS -->
+                    <Label for="addressId">Address</Label>
+                    <br>
+                    <input type="text" name="Address" id="addressId"
+                    style="border: none;
+                    border-bottom: 2px solid;
+                    border-image-slice: 1;
+                    border-image-source: linear-gradient(to left, #a2a2a2, #000000);
+                    width: 270px;">
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 15px 45px;">
+                    <!-- EMAIL -->
+                    <label for="emailId">Email</label>
+                    <br>
+                    <input type="email" name="Email" id="emailId" placeholder="email@example.com"
+                    style="border: none;
+                    border-bottom: 2px solid;
+                    border-image-slice: 1;
+                    border-image-source: linear-gradient(to left, #a2a2a2, #000000);
+                    width: 270px;">
+                </td>
+                <td style="padding: 15px 45px;">
+                    <!-- STATE -->
+                    <Label for="stateId">State</Label>
+                    <br>
+                    <select name="State" id="stateId" style="border: none;
+                    font-family: system-ui;
+                    border-bottom: 2px solid;
+                    border-image-slice: 1;
+                    border-image-source: linear-gradient(to left, #a2a2a2, #000000);
+                    width: 270px;">
+                        <optgroup label="Northwest">
+                            <option value="Baja California">Baja California</option>
+                            <option value="Baja California Sur">Baja California Sur</option>
+                            <option value="Sonora">Sonora</option>
+                            <option value="Chihuahua">Chihuahua</option>
+                            <option value="Durango">Durango</option>
+                            <option value="Sinaloa">Sinaloa</option>
+                        </optgroup>
+                        <optgroup label="Northeast">
+                            <option value="Coahuila">Coahuila</option>
+                            <option value="Nuevo Leon">Nuevo Leon</option>
+                            <option value="Tamaulipas">Tamaulipas</option>
+                        </optgroup>
+                        <optgroup label="West">
+                            <option value="Colima">Colima</option>
+                            <option value="Jalisco">Jalisco</option>
+                            <option value="Michoacan">Michoacan</option>
+                            <option value="Nayarit">Nayarit</option>
+                        </optgroup>
+                        <optgroup label="East">
+                            <option value="Hidalgo">Hidalgo</option>
+                            <option value="Puebla">Puebla</option>
+                            <option value="Tlaxcala">Tlaxcala</option>
+                            <option value="Veracruz">Veracruz</option>
+                        </optgroup>
+                        <optgroup label="North Central">
+                            <option value="Aguascalientes">Aguascalientes</option>
+                            <option value="Guanajuato">Guanajuato</option>
+                            <option value="Queretaro">Queretaro</option>
+                            <option value="San Luis Potosi">San Luis Potosi</option>
+                            <option value="Zacatecas">Zacatecas</option>
+                        </optgroup>
+                        <optgroup label="South Central">
+                            <option value="Ciudad de Mexico">Ciudad de Mexico</option>
+                            <option value="Estado de Mexico">Estado de Mexico</option>
+                            <option value="Morelos">Morelos</option>
+                        </optgroup>
+                        <optgroup label="Southwest">
+                            <option value="Chiapas">Chiapas</option>
+                            <option value="Guerrero">Guerrero</option>
+                            <option value="Oaxaca">Oaxaca</option>
+                        </optgroup>
+                        <optgroup label="Southeast">
+                            <option value="Campeche">Campeche</option>
+                            <option value="Quintana Roo">Quintana Roo</option>
+                            <option value="Tabasco">Tabasco</option>
+                            <option value="Yucatan">Yucatan</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td style="padding: 15px 45px;">
+                    <!-- CHECKBOX -->
+                    <label for="">Which ones do you know how to use?</label>
+                    <br>
+                    <input type="checkbox" name="checkbox" id="model10Id" value="Smith and Wesson Model 10 Revolver">
+                    <label for="model10Id">Smith and Wesson Model 10</label>
+                    <br>
+                    <input type="checkbox" name="checkbox" id="detectiveId" value="Colt Detective Special Revolver">
+                    <label for="detectiveId">Colt Detective Special Revolver</label>
+                    <br>
+                    <input type="checkbox" name="checkbox" id="coltId" value="Colt 1911">
+                    <label for="coltId">Colt 1911</label>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 15px 45px;">
+                    <!-- PASSWORD -->
+                    <label for="passwordId">Password</label>
+                    <br>
+                    <input type="password" name="Password" id="passwordId"
+                    style="border: none;
+                    border-bottom: 2px solid;
+                    border-image-slice: 1;
+                    border-image-source: linear-gradient(to left, #a2a2a2, #000000);
+                    width: 270px;">
+                </td>
+                <td style="padding: 15px 45px;">
+                    <!-- CITY -->
+                    <Label for="cityId">City</Label>
+                    <br>
+                    <input type="text" name="City" id="cityId"
+                    style="border: none;
+                    border-bottom: 2px solid;
+                    border-image-slice: 1;
+                    border-image-source: linear-gradient(to left, #a2a2a2, #000000);
+                    width: 270px;">
+                </td>
+                <td style="padding: 15px 45px;">
+                    <!-- HOW LONG -->
+                    <label for="lengthId">How long is the Anaconda?</label>
+                    <br>
+                    <img src="../istockphoto-958873494-170667a.jpg" alt="reler imgage" width="270px">
+                    <br>
+                    <input type="range" name="Length" id="lengthId" min="0" max="30" style="width: 270px;">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 15px 45px;">
+                    <!-- CONFIRM PASSWORD -->
+                    <label for="rePassId">Re-type Password</label>
+                    <br>
+                    <input type="password" name="RePass" id="rePassId"
+                    style="border: none;
+                    border-bottom: 2px solid;
+                    border-image-slice: 1;
+                    border-image-source: linear-gradient(to left, #a2a2a2, #000000);
+                    width: 270px;">
+                </td>
+                <td style="padding: 15px 45px;">
+                    <!-- PHONE NUMBER -->
+                    <label for="phoneId">Phone</label>
+                    <br>
+                    <input type="number" name="Phone" id="phoneId" pattern="[0-9]{10}"
+                    style="border: none;
+                    border-bottom: 2px solid;
+                    border-image-slice: 1;
+                    border-image-source: linear-gradient(to left, #a2a2a2, #000000);
+                    width: 270px;">
+                </td>
+                <td style="padding: 15px 45px;">
+                    <!-- COLOR -->
+                    <br>
+                    <label for="colorAnacId">What Color is the Anaconda?</label>
+                    <input type="color" name="ColorAnac" id="colorAnacId">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 15px 45px 30px;">
+                    <!-- DATE OF BIRTH-->
+                    <label for="birthId">Date of Birth</label>
+                    <br>
+                    <input type="date" name="Date of Birth" id="birthId"
+                    style="border: none;
+                    border-bottom: 2px solid;
+                    border-image-slice: 1;
+                    border-image-source: linear-gradient(to left, #a2a2a2, #000000);
+                    width: 270px;">
+                </td>
+                <td style="padding: 15px 45px 30px;">
+                    <!-- FILE -->
+                    <label for="photoId">Select a Photo of Yourself</label>
+                    <br>
+                    <input type="file" name="Photo" id="photoId" accept="image/*">
+                </td>
+                <td style="padding: 15px 45px 30px;">
+                    <!-- RESET -->
+                    <input type="reset" value="RESET" 
+                    style="width: 120px;
+                    height: 30px;
+                    font-weight: 800;
+                    background-image: linear-gradient(to right, black 0%, #434343 100%);
+                    border-radius: 25px;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                    margin-right: 20px;">
+                    
+                    <!-- SUBMIT -->
+                    <input type="submit" value="SEND" 
+                    style="width: 120px;
+                    height: 30px;
+                    font-weight: 800;
+                    background-image: linear-gradient(to right, black 0%, #434343 100%);
+                    border-radius: 25px;
+                    color: white;
+                    border: none;
+                    cursor: pointer;">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <form action="" method="post" autocomplete="off">
+        <!-- FIRST NAME -->
+        <Label for="firstnameId">First Name</Label>
+        <br>
+        <input type="text" name="FirstName" id="firstnameId" 
+        style="border-radius: 8px;
+        border: 0.5px solid;">
+        <!-- FIRST NAME -->
+        <br>
+        <Label for="lastnameId">Last Name</Label>
+        <br>
+        <input type="text" name="LastName" id="lastnameId"
+        style="border-radius: 8px;
+        border: 0.5px solid;">
+        <!-- EMAIL -->
+        <br>
+        <label for="emailId">Email</label>
+        <br>
+        <input type="email" name="Email" id="emailId" placeholder="email@example.com"
+        style="border-radius: 8px;
+        border: 0.5px solid;">
+        <!-- PASSWORD -->
+        <br>
+        <label for="passwordId">Password</label>
+        <br>
+        <input type="password" name="Password" id="passwordId"
+        style="border-radius: 8px;
+        border: 0.5px solid;">
+        <!-- CONFIRM PASSWORD -->
+        <br>
+        <label for="rePassId">Re-type Password</label>
+        <br>
+        <input type="password" name="RePass" id="rePassId"
+        style="border-radius: 8px;
+        border: 0.5px solid;">
+        <!-- DATE OF BIRTH-->
+        <br>
+        <label for="birthId">Date of Birth</label>
+        <br>
+        <input type="date" name="Date of Birth" id="birthId">
+        <!-- RADIO -->
+        <br>
+        <label for="">Genre</label>
+        <br>
+        <input type="radio" name="Genre" id="maleId" value="Male">
+        <label for="maleId">Male</label>
+        <input type="radio" name="Genre" id="femaleId" value="Female">
+        <label for="femaleId">Female</label>
+        <!-- ADDRESS -->
+        <br>
+        <Label for="addressId">Address</Label>
+        <br>
+        <input type="text" name="Address" id="addressId"
+        style="border-radius: 8px;
+        border: 0.5px solid;">
+        <!-- CITY -->
+        <br>
+        <Label for="cityId">City</Label>
+        <br>
+        <input type="text" name="City" id="cityId"
+        style="border-radius: 8px;
+        border: 0.5px solid;">
+        <!-- STATE -->
+        <br>
+        <Label for="stateId">State</Label>
+        <br>
+        <select name="State" id="stateId">
+            <optgroup label="Northwest">
+                <option value="Baja California">Baja California</option>
+                <option value="Baja California Sur">Baja California Sur</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="Durango">Durango</option>
+                <option value="Sinaloa">Sinaloa</option>
+            </optgroup>
+            <optgroup label="Northeast">
+                <option value="Coahuila">Coahuila</option>
+                <option value="Nuevo Leon">Nuevo Leon</option>
+                <option value="Tamaulipas">Tamaulipas</option>
+            </optgroup>
+            <optgroup label="West">
+                <option value="Colima">Colima</option>
+                <option value="Jalisco">Jalisco</option>
+                <option value="Michoacan">Michoacan</option>
+                <option value="Nayarit">Nayarit</option>
+            </optgroup>
+            <optgroup label="East">
+                <option value="Hidalgo">Hidalgo</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Veracruz">Veracruz</option>
+            </optgroup>
+            <optgroup label="North Central">
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Queretaro">Queretaro</option>
+                <option value="San Luis Potosi">San Luis Potosi</option>
+                <option value="Zacatecas">Zacatecas</option>
+            </optgroup>
+            <optgroup label="South Central">
+                <option value="Ciudad de Mexico">Ciudad de Mexico</option>
+                <option value="Estado de Mexico">Estado de Mexico</option>
+                <option value="Morelos">Morelos</option>
+            </optgroup>
+            <optgroup label="Southwest">
+                <option value="Chiapas">Chiapas</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Oaxaca">Oaxaca</option>
+            </optgroup>
+            <optgroup label="Southeast">
+                <option value="Campeche">Campeche</option>
+                <option value="Quintana Roo">Quintana Roo</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Yucatan">Yucatan</option>
+            </optgroup>
+        </select>
+        <!-- PHONE NUMBER -->
+        <br>
+        <label for="phoneId">Phone</label>
+        <br>
+        <input type="number" name="Phone" id="phoneId" pattern="[0-9]{10}"
+        style="border-radius: 8px;
+        border: 0.5px solid;">
+        <!-- TEXT AREA -->
+        <br>
+        <label for="aboutId">Tell us About Yourself</label>
+        <br>
+        <textarea name="About" id="aboutId" cols="30" rows="10"></textarea>
+        <!-- HOW LONG -->
+        <br>
+        <label for="lengthId">Length</label>
+        <br>
+        <input type="range" name="Length" id="lengthId" min="0" max="30">
+
+         
+        <!-- CHECKBOX -->
+        <br>
+        <input type="checkbox" name="checkbox" id="" value="Text 2">
+        <label for="text1id">Text 5</label>
+        <br>
+        <input type="checkbox" name="checkbox" id="" value="Text 2">
+        <label for="text1id">Text 6</label>
+        <br>
+        <input type="checkbox" name="checkbox" id="" value="Text 2">
+        <label for="text1id">Text 7</label>
+        <br> 
+        <!-- TEXT AREA -->
+        <br>
+        <textarea name="textarea" id="textareaid" cols="30" rows="10">Default Text</textarea>
+        <br>
+        <!-- BUTTONS -->
+        <br>
+        <button type="">
+            Test
+        </button>
+        <br>
+        <!-- COLOR -->
+        <br>
+        <label for="">Color:</label>
+        <input type="color" name="" id="">
+        <br>
+        <!-- FILE -->
+        <br>
+        <label for="">File:</label>
+        <!-- accept="application/pdf" -->
+        <input type="file" name="" id="" multiple accept="image/png">
+        <br>
+        <!-- HIDEN -->
+        <br>
+        <label for="">Hiden:</label>
+        <input type="hidden" name="">
+        <br>
+        <!-- Month -->
+        <br>
+        <label for="">Month:</label>
+        <input type="month" name="" id="">
+        <br>
+        <!-- TIME -->
+        <br>
+        <label for="">Time:</label>
+        <input type="time" name="" id="">
+        <br>
+        <!-- URL -->
+        <br>
+        <label for="">URL:</label>
+        <input type="url" name="" id="">
+        <br>
+        <!-- WEEK -->
+        <br>
+        <label for="">Week:</label>
+        <input type="week" name="" id="">
+        <br>
+        <!-- RESET -->
+        <br>
+        <input type="reset" value="RESET" 
+        style="width: 120px;
+        height: 30px;
+        font-weight: 800;
+        background: repeating-linear-gradient(180deg, #ff9800, #ff3d00 33px);
+        border-radius: 25px;
+        border: 0.5px solid #fff;
+        cursor: pointer;">
+        <br>
+        <!-- SUBMIT -->
+        <br>
+        <input type="submit" value="SEND" 
+        style="width: 120px;
+        height: 30px;
+        font-weight: 800;
+        background: repeating-linear-gradient(180deg, #00ffe7, #00ff0a 33px);
+        border-radius: 25px;
+        border: 0.5px solid #fff;
+        cursor: pointer;">
+    </form>
+</body>
+</html>

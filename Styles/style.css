@@ -1,0 +1,66 @@
+body {
+    background-color: beige ;
+}
+
+#container {
+    background-color: darkslategrey;
+    color: white;
+    font-size: 20px;
+}
+
+.cont {
+    background-color: moccasin;
+    font-size: xx-large;
+}
+
+.w-50 {
+    width: 50px;
+}
+.btn-nice {
+    width: 120px;
+    height: 30px;
+    font-weight: 800;
+    background: linear-gradient(180deg, #5c5c5c, #000000 33px);
+    border-radius: 25px;
+    border: 0.5px solid rgb(0, 0, 0);
+    cursor: pointer;
+    /* color: white; */
+    text-align: center;
+    padding-top: 8px;
+}
+
+.btn-danger {
+    background: linear-gradient(180deg, #ff9800, #ff3d00 33px);
+}
+
+.btn-success {
+    background: linear-gradient(180deg, #00ffe7, #00ff0a 33px);
+}
+
+h1 {
+    color: #ff9800;
+}
+
+div.btn-nice {
+    text-decoration: underline;
+}
+
+* {
+    /* font-weight: 900; */
+}
+
+.white, .btn-nice {
+    color: white;
+}
+
+div {
+    /* color: deeppink; */
+}
+
+div span{
+    color: darksalmon;
+}
+
+div b {
+    color: #ff3d00;
+}
