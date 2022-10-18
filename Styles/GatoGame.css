@@ -467,7 +467,7 @@ span.win-message {
     font-size: 24px;
     font-weight: bold;
     font-family: 'Blue Cheries';
-    letter-spacing: 3px;
+    letter-spacing: 3px; 
     text-shadow: 2px 2px #000;
     transition: ease-in-out 0.25s;
 }
