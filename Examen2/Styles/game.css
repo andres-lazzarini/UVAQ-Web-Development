@@ -289,4 +289,12 @@ body {
         padding-left: 0px;
         border-radius: 5px;
     }
+
+    .marcador button {
+        font-size: 18px;
+    }
+
+    .start-menu {
+        width: 292px;
+    }
 }
