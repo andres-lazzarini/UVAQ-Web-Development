@@ -14,9 +14,9 @@ window.addEventListener('load', function () {
         document.querySelector(".container").style.display="block";
         randomGame();
 
-        clearInterval(Interval2);
-        Interval2 = setInterval(startTimer, 10);
-        
+        setTimeout(() => {
+            Interval2 = setInterval(startTimer, 10);
+          }, 600)
 
     });
 
@@ -33,33 +33,33 @@ window.addEventListener('load', function () {
 
         e.addEventListener("click", function() {move(getCell(row, col))});
     });
-});
 
-function startTimer () {
-    tens++; 
-    
-    if(tens <= 9){
-      appendTens.innerHTML = "0" + tens;
-    }
-    
-    if (tens > 9){
-      appendTens.innerHTML = tens;
+    function startTimer () {
+        tens++; 
+        
+        if(tens <= 9){
+          appendTens.innerHTML = "0" + tens;
+        }
+        
+        if (tens > 9){
+          appendTens.innerHTML = tens;
+          
+        } 
+        
+        if (tens > 99) {
+          console.log("seconds");
+          seconds++;
+          appendSeconds.innerHTML = "0" + seconds;
+          tens = 0;
+          appendTens.innerHTML = "0" + 0;
+        }
+        
+        if (seconds > 9){
+          appendSeconds.innerHTML = seconds;
+        }
       
-    } 
-    
-    if (tens > 99) {
-      console.log("seconds");
-      seconds++;
-      appendSeconds.innerHTML = "0" + seconds;
-      tens = 0;
-      appendTens.innerHTML = "0" + 0;
-    }
-    
-    if (seconds > 9){
-      appendSeconds.innerHTML = seconds;
-    }
-  
-  }
+      }
+});
 
 function move(cell){
 
