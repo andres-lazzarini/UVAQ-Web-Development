@@ -1,12 +1,30 @@
 var startEnd = true;
+var difi = 1;
+var seconds = 00; 
+var tens = 00; 
+var Interval2;
 
 window.addEventListener('load', function () {
+    const appendTens = document.getElementById("tens");
+    const appendSeconds = document.getElementById("seconds");
 
-    var seconds = 00; 
-    var tens = 00; 
-    var appendTens = document.getElementById("tens");
-    var appendSeconds = document.getElementById("seconds");
-    var Interval2;
+    deasy = this.document.querySelector(".easy");
+    deasy.addEventListener("click", () => {
+        difi = 1;
+        this.document.querySelector(".dificultad").innerHTML = "Level: Easy";
+    });
+
+    deasy = this.document.querySelector(".medium");
+    deasy.addEventListener("click", () => {
+        difi = 2;
+        this.document.querySelector(".dificultad").innerHTML = "Level: Medium";
+    });
+
+    deasy = this.document.querySelector(".hard");
+    deasy.addEventListener("click", () => {
+        difi = 3;
+        this.document.querySelector(".dificultad").innerHTML = "Level: Hard";
+    });
 
     startbtn = this.document.querySelector(".start-menu button");
     startbtn.addEventListener("click", function() {
@@ -16,13 +34,26 @@ window.addEventListener('load', function () {
 
         setTimeout(() => {
             Interval2 = setInterval(startTimer, 10);
-          }, 600)
+        }, 600);
 
     });
 
     newg = document.querySelector(".marcador button");
     newg.addEventListener("click", function(){
+        clearInterval(Interval2);
+        tens = "00";
+  	    seconds = "00";
+        document.getElementById("seconds").innerHTML = "00";
+        document.getElementById("tens").innerHTML = "00";
         randomGame();
+        setTimeout(() => {
+            Interval2 = setInterval(startTimer, 10);
+        }, 600);
+    });
+
+    pabtn = this.document.querySelector(".end-content button");
+    pabtn.addEventListener("click", () => {
+        pagain();
     });
 
     let cells = document.querySelectorAll(".cell-container").forEach(function (e) {
@@ -57,6 +88,18 @@ window.addEventListener('load', function () {
         if (seconds > 9){
           appendSeconds.innerHTML = seconds;
         }
+
+        if (seconds == 300 && difi == 2){
+            clearInterval(Interval2);
+            document.querySelector(".end-content .title").innerHTML = "Game Over";
+            endGame();
+        }
+
+        if (seconds == 120 && difi == 3){
+            clearInterval(Interval2);
+            document.querySelector(".end-content .title").innerHTML = "Game Over";
+            endGame();
+        }
       
       }
 });
@@ -77,7 +120,11 @@ function move(cell){
             emptyCell.querySelector(".number-container .number").innerHTML = tmp.num;
             
             if(startEnd){
-                setTimeout(winCheck, 150);
+                setTimeout(() => {
+                    winCheck1();
+                    winCheck2();
+                    winCheck3();
+                }, 150);
             }
         }
     } 
@@ -87,10 +134,10 @@ function getCell(row, col){
     return document.getElementById(`${row}-${col}`);
 }
 
-function winCheck(){
+function winCheck1(){
 		
     if(getCell(4, 4).className != 'cell-container empty'){
-        console.log("NO check")
+        console.log("NO check1")
         return;
     }
 
@@ -105,7 +152,83 @@ function winCheck(){
         }
     }
     
-    console.log("Done!")
+    console.log("Done1!")
+    clearInterval(Interval2);
+    let stoptime = document.querySelector(".time-content");
+    document.querySelector(".end-content .title").innerHTML = "Congratulations!";
+    document.querySelector(".end-content .title").insertAdjacentElement("afterend", stoptime);
+    endGame();
+}
+
+function winCheck2(){
+		
+    if(getCell(4, 4).className != 'cell-container empty'){
+        console.log("NO check2")
+        return;
+    }
+
+    var n = 15;
+
+    for(var i = 1; i <= 4; i++){
+        for(var j = 1; j <= 4; j++){
+            if(n >= 1 && getCell(i, j).querySelector(".number-container .number").innerHTML != n.toString()){
+                return;
+            }
+            n--;
+        }
+    }
+    
+    console.log("Done2!")
+    clearInterval(Interval2);
+    let stoptime = document.querySelector(".time-content");
+    document.querySelector(".end-content .title").innerHTML = "Congratulations!";
+    document.querySelector(".end-content .title").insertAdjacentElement("afterend", stoptime);
+    endGame();
+}
+
+function winCheck3(){
+		
+    if(getCell(4, 1).className != 'cell-container empty'){
+        console.log("NO check3")
+        return;
+    }
+
+    var n = 1;
+
+    for(var i = 1; i <= 4; i++){
+        if(n <= 15 && getCell(1, i).querySelector(".number-container .number").innerHTML != n.toString()){
+            return;
+        }
+        n++;
+    }
+
+    for(var i = 4; i >= 1; i--){
+        if(n <= 15 && getCell(2, i).querySelector(".number-container .number").innerHTML != n.toString()){
+            return;
+        }
+        n++;
+    }
+
+    for(var i = 1; i <= 4; i++){
+        if(n <= 15 && getCell(3, i).querySelector(".number-container .number").innerHTML != n.toString()){
+            return;
+        }
+        n++;
+    }
+
+    for(var i = 4; i >= 1; i--){
+        if(n <= 15 && getCell(4, i).querySelector(".number-container .number").innerHTML != n.toString()){
+            return;
+        }
+        n++;
+    }
+    
+    console.log("Done3!")
+    clearInterval(Interval2);
+    let stoptime = document.querySelector(".time-content");
+    document.querySelector(".end-content .title").innerHTML = "Congratulations!";
+    document.querySelector(".end-content .title").insertAdjacentElement("afterend", stoptime);
+    endGame();
 }
 
 function getEmptyCell(){
@@ -153,7 +276,7 @@ function randomGame(){
     var previousCell;
     var i = 1;
     var interval = setInterval(function(){
-        if(i <= 100){
+        if(i <= 1){
             var adjacent = getAdjacentCells(getEmptyCell());
             if(previousCell){
                 for(var j = adjacent.length-1; j >= 0; j--){
@@ -175,4 +298,20 @@ function randomGame(){
 
 function getRandomNum(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function endGame(){
+    document.querySelector(".container").style.display = "none";
+    document.querySelector(".end-menu").style.display = "block";
+}
+
+function pagain(){
+    tens = "00";
+    seconds = "00";
+    document.getElementById("seconds").innerHTML = "00";
+    document.getElementById("tens").innerHTML = "00";
+    document.querySelector(".end-menu").style.display = "none";
+    document.querySelector(".start-menu").style.display = "block";
+    let stoptime = document.querySelector(".time-content");
+    document.querySelector(".time-container .time").insertAdjacentElement("beforeend", stoptime);
 }

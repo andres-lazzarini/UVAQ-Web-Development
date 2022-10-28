@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Lemon";
+    src: url(../Fonts/Lemon\ Days.ttf);
+}
+
 html, body {
     margin: 0;
 }
@@ -6,7 +11,7 @@ body {
     background: #d2750b;
     color: #fff;
     padding: 0;
-    font-family: Pacifico, cursive;
+    font-family: 'Lemon';
 }
 
 .main-container {
@@ -35,6 +40,7 @@ body {
 .start-menu button {
     margin: 50px auto;
     font-size: 22px;
+    font-family: 'Lemon';
     width: 150px;
     display: block;
     border-radius: 8px;
@@ -151,6 +157,10 @@ body {
     color: rgb(255, 255, 255);
 }
 
+.time-content p{
+    margin: 0;
+}
+
 .game-container {
     margin: 5px 0px;
     grid-template-columns: auto auto auto auto;
@@ -193,4 +203,42 @@ body {
     height: 107px;
     transform: translate3d(0px, 0px, 0px);
     text-shadow: 5px 3px rgb(73, 149, 145), -2px -2px rgb(73, 149, 145);
+}
+
+.end-menu {
+    display: none;
+    margin-top: 45vh;
+}
+
+.end-content {
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+
+.end-content .title {
+    font-size: 40px;
+}
+
+.end-content button {
+    font-size: 22px;
+    width: 150px;
+    display: block;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    text-decoration: none;
+    line-height: 60px;
+    text-align: center;
+    background-color: #e91e63;   
+    color: rgba(255, 255, 255, 0.678);
+    transition: opacity 0.3s ease 0s;
+    margin: 25px auto 0;
+}
+
+.end-content button:hover{
+    background-color: #e91e1e;
+    color: white;
 }
