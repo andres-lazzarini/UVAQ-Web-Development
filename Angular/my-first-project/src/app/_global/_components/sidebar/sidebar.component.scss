@@ -1,0 +1,12 @@
+.navbar-nav .nav-item .nav-link {
+  cursor: pointer;
+}
+.navbar-nav .nav-item .nav-link .icon > i {
+  color: rgb(36, 36, 36);
+}
+.navbar-nav .nav-item .nav-link.active .icon > i {
+  color: #fff;
+}
+#sidenav-collapse-main {
+  height: 100vh;
+}
