@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-global-sidebar',
@@ -15,30 +16,30 @@ export class SidebarComponent implements OnInit {
     {
       code: 'dashboard',
       label: 'Dashboard',
-      target: null,
+      target: '',
       icon: 'ni-shop'
     },
     {
       code: 'users',
       label: 'Users',
-      target: null,
+      target: 'users',
       icon: 'ni-single-02'
     },
     {
-      code: 'tears',
-      label: 'Tears',
-      target: null,
+      code: 'tiers',
+      label: 'Tiers',
+      target: 'tiers',
       icon: 'ni-bullet-list-67'
     },
     {
       code: 'products',
       label: 'Products',
-      target: null,
+      target: 'products',
       icon: 'ni-tag'
     }
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -47,8 +48,9 @@ export class SidebarComponent implements OnInit {
     this.siteName = "XXX";
   }
 
-  setMenu(code: string){
-    this.currentMenu = code;
+  setMenu(item: any){
+    this.currentMenu = item.code;
+    this.router.navigateByUrl(item.target);
   }
 
 }

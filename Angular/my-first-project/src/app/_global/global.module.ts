@@ -13,6 +13,24 @@ const routes: Routes = [
   {
     path: '',
     component: MainComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('../dashboard/dashboard.module').then((m) => m.DashboardModule),
+      },
+      {
+        path: 'users',
+        loadChildren: () => import('../users/users.module').then((m) => m.UsersModule),
+      },
+      {
+        path: 'tiers',
+        loadChildren: () => import('../tiers/tiers.module').then((m) => m.TiersModule),
+      },
+      {
+        path: 'products',
+        loadChildren: () => import('../products/products.module').then((m) => m.ProductsModule),
+      },
+    ]
   },
   {
     path: "**",
