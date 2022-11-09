@@ -7,7 +7,6 @@ import {MainComponent} from './_components/main/main.component';
 import { HeaderComponent } from './_components/header/header.component';
 import { FooterComponent } from './_components/footer/footer.component';
 import { SidebarComponent } from './_components/sidebar/sidebar.component';
-import { ContentComponent } from './_components/content/content.component';
 import {NotFoundComponent} from './_components/not-found/not-found.component';
 
 const routes: Routes = [
@@ -26,7 +25,6 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    ContentComponent,
     MainComponent,
     NotFoundComponent,
   ],
