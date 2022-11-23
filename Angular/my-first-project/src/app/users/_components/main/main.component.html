@@ -1,3 +1,55 @@
-<p>main users works!</p>
-<span>USERID: {{ userID }}</span>
-<span>CATID: {{ catID }}</span>
+<div class="card" *ngIf="loadView">
+  <div class="table-responsive">
+    <table class="table align-items-center mb-0">
+      <thead>
+        <tr>
+          <th
+            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
+          >
+            ID
+          </th>
+          <th
+            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+          >
+            User
+          </th>
+          <th class="text-secondary opacity-7"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td class="align-middle text-center text-sm">
+            <span class="text-secondary text-xs font-weight-bold">{{
+              user.id
+            }}</span>
+          </td>
+          <td>
+            <div class="d-flex px-2 py-1">
+              <div>
+                <img [src]="user.avatar" class="avatar avatar-sm me-3" />
+              </div>
+              <div class="d-flex flex-column justify-content-center">
+                <h6 class="mb-0 text-xs">
+                  {{ user.first_name }}
+                  {{ user.last_name }}
+                </h6>
+                <p class="text-xs text-secondary mb-0">{{ user.email }}</p>
+              </div>
+            </div>
+          </td>
+          <td class="align-middle">
+            <a
+              href="javascript:;"
+              class="text-secondary font-weight-bold text-xs"
+              data-toggle="tooltip"
+              data-original-title="Edit user"
+              [routerLink]="['/users', user.id]"
+            >
+              Edit
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
