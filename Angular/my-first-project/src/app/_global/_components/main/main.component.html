@@ -1,3 +1,7 @@
+<div class="global-loader" *ngif="servGlobal.showLoader()">
+  <span>{{serveGlobal.showLoaderMsg}}</span>
+  <span class="loader"></span>
+</div>
 <app-global-sidebar></app-global-sidebar>
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
   <app-global-header></app-global-header>

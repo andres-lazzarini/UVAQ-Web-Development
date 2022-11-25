@@ -1,3 +1,4 @@
+import { GlobalService } from './../../_services/global.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(public serveGlobal: GlobalService) { }
 
   ngOnInit(): void {
+    // this.serveGlobal.showGlobalLoader();
+
+    // setTimeout(() => {
+    //   this.serveGlobal.hideGlobalLoader();
+    // }, 3000);
   }
 
 }
