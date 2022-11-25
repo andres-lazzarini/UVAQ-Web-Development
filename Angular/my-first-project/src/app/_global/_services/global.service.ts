@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GlobalService {
   showLoader = false;
@@ -12,10 +12,10 @@ export class GlobalService {
 
   showGlobalLoader(message?: string) {
     this.showLoader = true;
-    this.showLoaderMsg = 'Loading...';
+    this.showLoaderMsg = message ? message : 'Loading..';
   }
 
-  hideGlobalLoader(){
+  hideGlobalLoader() {
     this.showLoader = false;
   }
 }

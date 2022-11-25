@@ -1,19 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
-import {GlobalService} from '../../_services/global.service';
+import { GlobalService } from '../../_services/global.service';
 
 @Component({
   selector: 'app-global-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  searchBox = 'default text';
 
-  searchBox = 'Default text';
+  constructor(public servGlobal: GlobalService) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

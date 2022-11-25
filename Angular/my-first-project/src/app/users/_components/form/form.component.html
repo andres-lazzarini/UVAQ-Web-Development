@@ -1,0 +1,61 @@
+<div *ngIf="loadView">
+  <form [formGroup]="form">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="firstName"
+            [class.is-invalid]="
+              form.controls['firstName'].touched &&
+              form.controls['firstName'].invalid
+            "
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="lastName"
+            [class.is-invalid]="
+              form.controls['lastName'].touched &&
+              form.controls['lastName'].invalid
+            "
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Email</label>
+          <input
+            type="text"
+            formControlName="email"
+            class="form-control"
+            [class.is-invalid]="
+              form.controls['email'].touched && form.controls['email'].invalid
+            "
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button
+          type="button"
+          class="btn btn-primary"
+          [disabled]="form.invalid"
+          (click)="save()"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
